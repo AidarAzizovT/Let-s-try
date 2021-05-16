@@ -1,0 +1,3 @@
+from django.http import HttpResponse
+def index(request):
+    return HttpResponse("Here will be great website on June")
