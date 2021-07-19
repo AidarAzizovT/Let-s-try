@@ -33,13 +33,16 @@ sys.path.insert(0,os.path.join(PROJECT_ROOT, 'apps'))
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'articles'
+    'articles',
+
+
 ]
 
 MIDDLEWARE = [
@@ -57,7 +60,9 @@ ROOT_URLCONF = 'MyWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(PROJECT_ROOT, 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
